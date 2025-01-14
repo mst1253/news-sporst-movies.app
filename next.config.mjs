@@ -3,6 +3,7 @@
 import withBundleAnalyzer from '@next/bundle-analyzer';
 
 const nextConfig = withBundleAnalyzer({
+  output:"export",
   enabled: process.env.ANALYZE === 'true',
 })({
   images: {
