@@ -25,10 +25,10 @@ const nextConfig = {
     domains: ['firebasestorage.googleapis.com'], // Allowed domains for images
     unoptimized: true, // Required for static export when using external images
   },
-  experimental: {
+  /*experimental: {
     optimizeCss: true, // Enable CSS optimization
     productionBrowserSourceMaps: true, // Enable source maps for production
-  },
+  },*/
 };
 
 // Export the configuration after applying the bundle analyzer
