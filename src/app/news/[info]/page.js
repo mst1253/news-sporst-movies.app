@@ -12,10 +12,14 @@ export default function NewsPage({searchParams}) {
   )
 }
 export async function generateStaticParams() {
-  const news = await fetchData(collection,limit, null);
-  return news.map((news) => ({
-    title: news.title,
-    desc: news.desc,
-    image: news.img,
+  const news = await fetchData("newsData",100, null);
+  if (!Array.isArray(news)) {
+    throw new Error("fetchData did not return an array");
+  }
+
+  return news.map((newsData) => ({
+    title: newsData.title,
+    desc: newsData.desc,
+    image: newsData.img,
   }));
 }

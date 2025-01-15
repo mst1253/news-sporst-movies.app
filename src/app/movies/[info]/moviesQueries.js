@@ -6,8 +6,7 @@ import { useState} from "react";
 import { fetchData } from "@/compons/fetchData/fetch";
 import { useQuery } from "react-query";
 
-export default function MoviesPage({ searchParams }) {
-  
+export default function MoviesPage(searchParams) {
   const [title, setTitle] = useState(searchParams?.title || "");
   const [desc, setDesc] = useState(searchParams?.desc || "");
   const [img, setImg] = useState(searchParams?.image || "");
