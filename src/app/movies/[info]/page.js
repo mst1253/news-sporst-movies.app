@@ -1,3 +1,4 @@
+import { fetchData } from "@/compons/fetchData/fetch";
 import MoviesPage from "./moviesQueries";
 export default function MoviesQueries(){
   return(
