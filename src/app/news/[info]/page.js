@@ -1,4 +1,5 @@
 import InfoPageData from "@/app/dashboard/newsQueries/infoPageData"
+import { fetchData } from "@/compons/fetchData/fetch";
 export default function NewsPage({searchParams}) {
   return (
     <InfoPageData searchparams={searchParams} 
@@ -9,4 +10,12 @@ export default function NewsPage({searchParams}) {
     collection="newsData"
     />
   )
+}
+export async function generateStaticParams() {
+  const news = await fetchData(collection,limit, null);
+  return news.map((news) => ({
+    title: news.title,
+    desc: news.desc,
+    image: news.img,
+  }));
 }

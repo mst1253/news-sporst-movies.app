@@ -1,6 +1,6 @@
 import InfoPageData from "@/app/dashboard/newsQueries/infoPageData";
 const cardParentStyle="grid flex-wrap grid-cols-3 gap-4 sm:grid-cols-4 md:grid-cols-5 lg:grid-cols-7 xl:grid-cols-8";
-
+import { fetchData } from "@/compons/fetchData/fetch";
 export default function SportsPage({searchParams}) {
   return (
     <InfoPageData searchparams={searchParams} style='p-2 grid place-items-center text-center' 
@@ -10,4 +10,12 @@ export default function SportsPage({searchParams}) {
     collection='sportsData'
     />
   )
+}
+export async function generateStaticParams() {
+  const news = await fetchData(collection,limit, null);
+  return news.map((news) => ({
+    title: news.title,
+    desc: news.desc,
+    image: news.img,
+  }));
 }
