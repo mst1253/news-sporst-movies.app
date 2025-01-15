@@ -1,4 +1,4 @@
-import InfoPageData from "@/app/dashboard/infoPageData"
+import InfoPageData from "@/app/dashboard/newsQueries/infoPageData"
 export default function NewsPage({searchParams}) {
   return (
     <InfoPageData searchparams={searchParams} 

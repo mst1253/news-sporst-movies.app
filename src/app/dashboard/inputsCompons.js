@@ -1,5 +1,5 @@
 "use client";
-import { useState,useEffect} from "react";
+import { useState} from "react";
 import { ref,uploadBytes,getDownloadURL } from "firebase/storage";
 import {TextInput,Button,Textarea,Label,FileInput} from "flowbite-react";
 import { storage } from "../db/firebase";

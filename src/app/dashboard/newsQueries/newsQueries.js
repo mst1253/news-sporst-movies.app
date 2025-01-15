@@ -56,11 +56,3 @@ export default function InfoPageData({searchparams,style,columns,style2,limit,co
      </div>
   )
 }
-export async function generateStaticParams() {
-  const news = await fetchData(collection,limit, null);
-  return news.map((news) => ({
-    title: news.title,
-    desc: news.desc,
-    image: news.img,
-  }));
-}

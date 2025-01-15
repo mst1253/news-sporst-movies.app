@@ -1,4 +1,4 @@
-import InfoPageData from "@/app/dashboard/infoPageData";
+import InfoPageData from "@/app/dashboard/newsQueries/infoPageData";
 const cardParentStyle="grid flex-wrap grid-cols-3 gap-4 sm:grid-cols-4 md:grid-cols-5 lg:grid-cols-7 xl:grid-cols-8";
 
 export default function SportsPage({searchParams}) {
