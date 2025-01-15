@@ -1,5 +1,5 @@
 import MoviesPage from "./moviesQueries";
-export function MoviesQueries(){
+export default function MoviesQueries(){
   return(
    <MoviesPage />
   )

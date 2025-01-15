@@ -1,5 +1,5 @@
 import InfoPageData from "./newsQueries";
-export function NewsQueries(){
+export default function NewsQueries(){
   return(
   <InfoPageData />
   )
